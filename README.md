@@ -5,18 +5,25 @@
 잘 써주시면 감사하겠습니다. 😁
 ### **뚝딱스킨1 둘러보기**
 #### **PC버전**
-[##_Image|kage@um3Ug/btsKOABRU1e/6IQ5ahhDJDKYIrQh9yFG3K/img.png|CDM|1.3|{"originWidth":1000,"originHeight":667,"style":"alignCenter","filename":"목업.png"}_##][##_Image|kage@stGq4/btsKPvGwFqX/Ryn9M9zBdyuO6WoKF2HIAK/img.png|CDM|1.3|{"originWidth":1920,"originHeight":1659,"style":"alignCenter"}_##][##_Image|kage@q7z4V/btsKOGaowci/LKKpXGCGTwSNBPRk4prXI0/img.png|CDM|1.3|{"originWidth":1903,"originHeight":2025,"style":"alignCenter","width":788,"height":839,"filename":"2024-11-19 11 50 32.png"}_##]
-[##_Image|kage@TiXCd/btsKOVrLN0h/XbboSbqdRrBrUG1GKRTARk/img.png|CDM|1.3|{"originWidth":349,"originHeight":186,"style":"alignCenter","caption":"작성할때 제목1/2/3을 써주면 오른쪽에 목차가 따라다녀요."}_##]
+![image](https://github.com/user-attachments/assets/991ec1d8-b283-49be-976c-1c11f989a7fb)
+![image](https://github.com/user-attachments/assets/d0cded09-3055-4285-980b-7b9ee0a05a4f)
+![image](https://github.com/user-attachments/assets/548a5618-6922-45d3-abc1-c64efe229d45)
+![image](https://github.com/user-attachments/assets/2ef1b1c1-41ed-40c8-b8f5-ef720ff84db1)
+작성할때 제목1/2/3을 써주면 오른쪽에 목차가 따라다녀요.
 
 #### **태블릿**
-[##_ImageGrid|kage@AYtOc/btsKN0A3kYO/xzPtzGWIiQXYI6g4evNzUk/img.png,kage@HoRBY/btsKONVhMD0/8G4My0kyUKZOZkrtzUdTM0/img.png|data-origin-width="872" data-origin-height="956" data-is-animation="false" style="width: 54.6599%; margin-right: 10px;" data-widthpercent="55.3",data-origin-width="533" data-origin-height="723" data-is-animation="false" data-widthpercent="44.7" data-filename="blob" style="width: 44.1773%;"|작은크기의 태블릿크기일때는 사이드바가 여/닫기로 존재합니다. _##]
+![image](https://github.com/user-attachments/assets/0d90c4d0-4492-43bd-ac02-76a8ba958138)
+작은크기의 태블릿크기일때는 사이드바가 여/닫기로 존재합니다.
 
 #### **모바일**
-[##_ImageGrid|kage@dUVoVQ/btsKNBuIUX9/IgE24OoodXMjP3DAC4mO90/img.png,kage@bLDhiu/btsKMYDVyS4/ELPzc5IoKWKuvO1pAsxlNK/img.png,kage@dNCadz/btsKO6NOtRf/7bKqwE2kgtFcSYCwKHLHz1/img.png|data-origin-width="401" data-origin-height="856" data-is-animation="false" style="width: 32.5852%; margin-right: 10px;" data-widthpercent="33.36",data-origin-width="400" data-origin-height="854" data-is-animation="false" style="width: 32.58%; margin-right: 10px;" data-widthpercent="33.36",data-origin-width="401" data-origin-height="858" data-is-animation="false" style="width: 32.5092%;" data-widthpercent="33.28"|_##]
+![image](https://github.com/user-attachments/assets/472d576e-5860-495a-b123-de7b6b213876)
+![image](https://github.com/user-attachments/assets/935a1613-c0b3-46f0-a133-d96ac43f0139)
+![image](https://github.com/user-attachments/assets/b6d65b90-0299-4875-be30-f31de1a46b3d)
 
 ### **다운로드 방법**
 **[https://github.com/jngmnj/skin-ttuttak](https://github.com/jngmnj/skin-ttuttak)**
-[##_Image|kage@cPHdXB/btsKOqeWZtv/cwIn8GQxv7OY1ABiilni5K/img.png|CDM|1.3|{"originWidth":997,"originHeight":621,"style":"alignCenter"}_##]
+![image](https://github.com/user-attachments/assets/f755e54c-09c1-4bfa-8ff6-9978a8bc71e6)
+
 Code에서 Download ZIP을 눌러서 다운받아줍니다.
 
 ### **적용방법**
@@ -34,7 +41,8 @@ https://[티스토리주소].tistory.com/manage/design/skin/edit#/
 ![image](https://github.com/user-attachments/assets/f02a5aea-6131-4f84-9343-7dff89e53868)
 프로필 배경 등 설정가능합니다. 
 #### **프로필 배경설정하기**
-[##_ImageGrid|kage@bZx8SG/btsKMJmjcOE/Dw6wRlrJ1VAQCjW2aTfpVK/img.png,kage@cAtfEq/btsKM4xjvml/wdgtZueyMDrPXG7e02Jj1K/img.png|data-origin-width="376" data-origin-height="257" data-is-animation="false" style="width: 52.1168%; margin-right: 10px;" data-widthpercent="52.73",data-origin-width="602" data-origin-height="459" data-is-animation="false" style="width: 46.7204%;" data-widthpercent="47.27"|_##]
+![image](https://github.com/user-attachments/assets/1778e16e-3b07-46b6-a16c-51a66978ddb1)
+![image](https://github.com/user-attachments/assets/4a6107c8-c4ce-4aa2-9d0d-7e2d2b63e3b0)
 
 프로필 뒷 배경을 편집하시고 싶으시다구요 ? ㅎㅎ
 https://\[티스토리주소\].tistory.com/manage/design/skin/edit#/
