@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="naver-site-verification" content="806d26121f8ac8d417804bc3b744c06fa45735e8" />
+	<meta name="google-site-verification" content="NFOZ9fEgnEG9iGmGbGFUX9pE2V9HohIvIF8HG3xI3BI" />
+	<title>[##_page_title_##]</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./images/reset.css">
+	<link rel="stylesheet" href="./images/remixicon.css">
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="./images/common.js?v2"></script>
+	<!-- mono font -->
+	<link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+	<!-- 자동목차 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+	<script defer>
+		$(document).ready(function () {
+			let content = document.querySelector('.entry-content')
+			let headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6, h7')
+			let headingMap = {}
+
+			Array.prototype.forEach.call(headings, function (heading) {
+				let id = heading.id ? heading.id : heading.textContent.trim().toLowerCase()
+					.split(' ').join('-').replace(/[\!\@\#\$\%\^\&\*\(\):]/ig, '')
+				headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+				if (headingMap[id]) {
+					heading.id = id + '-' + headingMap[id]
+				} else {
+					heading.id = id
+				}
+			})
+
+			tocbot.init({
+				tocSelector: '.toc1',
+				contentSelector: '.entry-content',
+				headingSelector: 'h1, h2, h3',
+				hasInnerContainers: false
+			});
+			tocbot.init({
+				tocSelector: '.toc2',
+				contentSelector: '.entry-content',
+				headingSelector: 'h1, h2, h3',
+				hasInnerContainers: false
+			});
+			$('.toc').addClass('toc-absolute');
+
+			let toc_top = $('.toc').offset().top;
+			$(window).scroll(function () {
+				if ($(this).scrollTop() >= toc_top) {
+					$('.toc').addClass('toc-fixed');
+					$('.toc').removeClass('toc-absolute');
+				} else {
+					$('.toc').addClass('toc-absolute');
+					$('.toc').removeClass('toc-fixed');
+				}
+			});
+		});
+	</script>
+
+	<!-- 하이라이트 적용 -->
+	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"> -->
+	<link rel="stylesheet" href="./images/stackoverflow-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script>hljs.initLineNumbersOnLoad();</script>
+	
+</head>
+
+<body id="[##_body_id_##]"
+	class="<s_if_var_layout-aside>[##_var_layout-aside_##]</s_if_var_layout-aside><s_if_var_list-type> [##_var_list-type_##]</s_if_var_list-type><s_if_var_view-more> [##_var_view-more_##]</s_if_var_view-more><s_not_var_promotion-mobile-view> promotion-mobile-hide</s_not_var_promotion-mobile-view>">
+	<s_t3>
+		<div id="acc-nav">
+			<a href="#content">본문 바로가기</a>
+		</div>
+		<div id="wrap">
+			<!-- <header id="header">
+				<div class="marquee">
+					<a href="[##_blog_link_##]" title="[##_title_##]">
+				<span class=" txt">[##_title_##] [##_title_##] [##_title_##] [##_title_##] [##_title_##] [##_title_##]
+						[##_title_##] [##_title_##] [##_title_##] [##_title_##] [##_title_##] [##_title_##]
+						[##_title_##] [##_title_##] [##_title_##] [##_title_##]</span>
+					</a>
+				</div>
+				<div class="side-btn mobile">
+					<button type="button" title="메뉴 열기/닫기" class="switch">
+						<img src="//i1.daumcdn.net/thumb/C140x140/?fname=[##_image_##]" alt="프로필사진">
+					</button>
+				</div>
+				<div class="btn-group">
+					<a href="/guestbook" class="guest">방명록</a>
+					<a href="/manage/newpost/" class="write">글쓰기</a>
+				</div>
+			</header> -->
+			<div class="side-btn mobile">
+				<button type="button" title="메뉴 열기/닫기" class="switch">
+					<img src="//i1.daumcdn.net/thumb/C140x140/?fname=[##_image_##]" alt="프로필사진">
+				</button>
+			</div>
+			<div class="fade-bg" onclick="closeAll()"></div>
+
+			<section id="container">
+
+				<aside id="l_side">
+					<div class="floating">
+						<!-- 프로필 -->
+						<div class="box-profile">
+							<div class="profile">
+								<a href="[##_blog_link_##]" title="[##_title_##]">
+									<div class="img-profile-bg"
+										style="background-image: url([##_var_profile-bg-image_##]);background-repeat: no-repeat;background-size:cover;background-position: center center;">
+
+									</div>
+									<div class="profile-cont">
+										<div class="img-profile img-wrap">
+											<img src="//i1.daumcdn.net/thumb/C140x140/?fname=[##_image_##]" alt="프로필사진">
+										</div>
+										<div class="txt-profile">
+											<p class="blogger-name">[##_blogger_##]</p>
+											<p class="blogger-desc">[##_desc_##]</p>
+										</div>
+									</div>
+								</a>
+								<div class="btn-group">
+									<a href="/guestbook" class="guest">방명록</a>
+									<a href="/manage/newpost/" class="write">글쓰기</a>
+								</div>
+							</div>
+
+							<!-- 전체 방문자 -->
+							<div class="count-wrap">
+								<div>
+									<div class="cnt">[##_count_total_##]</div>
+									<div class="name">TOTAL</div>
+								</div>
+								<div>
+									<div class="cnt">[##_count_today_##]</div>
+									<div class="name">TODAY</div>
+								</div>
+								<div>
+									<div class="cnt">[##_count_yesterday_##]</div>
+									<div class="name">YDAY</div>
+								</div>
+							</div>
+						</div>
+						<!-- 검색 -->
+						<s_sidebar_element>
+							<!-- 검색 -->
+							<div class="search">
+								<s_search>
+									<input type="text" name="[##_search_name_##]" value="[##_search_text_##]"
+										onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" />
+									<button onclick="[##_search_onclick_submit_##]"><i
+											class="ri-search-line"></i></button>
+								</s_search>
+							</div>
+						</s_sidebar_element>
+						<!-- 카테고리 -->
+						<div class="box-sidebar">
+							<div class="sidebar-1">
+								<s_sidebar>
+									<s_sidebar_element>
+										<!-- 카테고리 -->
+										<nav class="category">
+											[##_category_list_##]
+										</nav>
+										<script>
+											var ccntEl = document.querySelectorAll(".c_cnt");
+											ccntEl.forEach((cnt) => {
+												var str = cnt.innerHTML;
+												var result1 = str.substr(1);
+												var result2 = result1.slice(0, -1);
+												cnt.innerHTML = result2;
+											});
+										</script>
+									</s_sidebar_element>
+								</s_sidebar>
+							</div>
+
+						</div>
+					</div>
+				</aside>
+				<div class="content-wrap">
+					<!-- 프로모션 -->
+					<s_if_var_promotion-1-image>
+						<div class="main-slider">
+							<ul>
+								<li style="background-image: url([##_var_promotion-1-image_##]);">
+									<s_if_var_promotion-1-url>
+										<a href="[##_var_promotion-1-url_##]">
+											<span class="inner">
+												<span class="box">
+													<s_if_var_promotion-1-text>
+														<span class="text" <s_if_var_promotion-1-color>
+															style="color:[##_var_promotion-1-color_##]"</s_if_var_promotion-1-color>>
+															[##_var_promotion-1-text_##]
+														</span>
+													</s_if_var_promotion-1-text>
+													<span class="btn">바로가기</span>
+												</span>
+											</span>
+										</a>
+									</s_if_var_promotion-1-url>
+									<s_not_var_promotion-1-url>
+										<span class="inner">
+											<span class="box">
+												<s_if_var_promotion-1-text>
+													<span class="text" <s_if_var_promotion-1-color>
+														style="color:[##_var_promotion-1-color_##]"</s_if_var_promotion-1-color>>
+														[##_var_promotion-1-text_##]
+													</span>
+												</s_if_var_promotion-1-text>
+											</span>
+										</span>
+									</s_not_var_promotion-1-url>
+								</li>
+								<s_if_var_promotion-2-image>
+									<li style="background-image: url([##_var_promotion-2-image_##]);">
+										<s_if_var_promotion-2-url>
+											<a href="[##_var_promotion-2-url_##]">
+												<span class="inner">
+													<span class="box">
+														<s_if_var_promotion-2-text>
+															<span class="text" <s_if_var_promotion-2-color>
+																style="color:[##_var_promotion-2-color_##]"</s_if_var_promotion-2-color>>
+																[##_var_promotion-2-text_##]
+															</span>
+														</s_if_var_promotion-2-text>
+														<span class="btn" <s_if_var_promotion-2-btn-color>
+															style="background-color:[##_var_promotion-2-btn-color_##]"</s_if_var_promotion-2-btn-color>>바로가기</span>
+													</span>
+												</span>
+											</a>
+										</s_if_var_promotion-2-url>
+										<s_not_var_promotion-2-url>
+											<span class="inner">
+												<span class="box">
+													<s_if_var_promotion-2-text>
+														<span class="text" <s_if_var_promotion-2-color>
+															style="color:[##_var_promotion-2-color_##]"</s_if_var_promotion-2-color>>
+															[##_var_promotion-2-text_##]
+														</span>
+													</s_if_var_promotion-2-text>
+												</span>
+											</span>
+										</s_not_var_promotion-2-url>
+									</li>
+								</s_if_var_promotion-2-image>
+								<s_if_var_promotion-3-image>
+									<li style="background-image: url([##_var_promotion-3-image_##]);">
+										<s_if_var_promotion-3-url>
+											<a href="[##_var_promotion-3-url_##]">
+												<span class="inner">
+													<span class="box">
+														<s_if_var_promotion-3-text>
+															<span class="text" <s_if_var_promotion-3-color>
+																style="color:[##_var_promotion-3-color_##]"</s_if_var_promotion-3-color>>
+																[##_var_promotion-3-text_##]
+															</span>
+														</s_if_var_promotion-3-text>
+														<span class="btn" <s_if_var_promotion-3-btn-color>
+															style="background-color:[##_var_promotion-3-btn-color_##]"</s_if_var_promotion-3-btn-color>>바로가기</span>
+													</span>
+												</span>
+											</a>
+										</s_if_var_promotion-3-url>
+										<s_not_var_promotion-3-url>
+											<span class="inner">
+												<span class="box">
+													<s_if_var_promotion-3-text>
+														<span class="text" <s_if_var_promotion-3-color>
+															style="color:[##_var_promotion-3-color_##]"</s_if_var_promotion-3-color>>
+															[##_var_promotion-3-text_##]
+														</span>
+													</s_if_var_promotion-3-text>
+												</span>
+											</span>
+										</s_not_var_promotion-3-url>
+									</li>
+								</s_if_var_promotion-3-image>
+							</ul>
+						</div>
+					</s_if_var_promotion-1-image>
+					<article id="content">
+						[##_revenue_list_upper_##]
+
+						<s_cover_group>
+							<s_cover_rep>
+
+								<s_cover name='cover-thumbnail-1'>
+									<div class="cover-thumbnail-1">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]">
+														<figure>
+															<s_cover_item_thumbnail>
+																<img src="//i1.daumcdn.net/thumb/C230x300/?fname=[##_cover_item_thumbnail_##]"
+																	alt="">
+															</s_cover_item_thumbnail>
+														</figure>
+														<span class="title">[##_cover_item_title_##]</span>
+														<s_cover_item_article_info>
+															<span class="date">[##_cover_item_simple_date_##]</span>
+														</s_cover_item_article_info>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+										<s_cover_url>
+											<a href="[##_cover_url_##]" class="more">more</a>
+										</s_cover_url>
+									</div>
+								</s_cover>
+
+								<s_cover name='cover-thumbnail-2'>
+									<div class="cover-thumbnail-2">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]">
+														<figure>
+															<s_cover_item_thumbnail>
+																<img src="//i1.daumcdn.net/thumb/C126x166/?fname=[##_cover_item_thumbnail_##]"
+																	alt="">
+															</s_cover_item_thumbnail>
+														</figure>
+														<span class="title">[##_cover_item_title_##]</span>
+														<span class="excerpt">[##_cover_item_summary_##]</span>
+														<s_cover_item_article_info>
+															<span class="meta">
+																<span class="date">[##_cover_item_simple_date_##]</span>
+															</span>
+														</s_cover_item_article_info>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+									</div>
+								</s_cover>
+
+								<s_cover name='cover-thumbnail-3'>
+									<div class="cover-thumbnail-3">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]">
+														<figure>
+															<s_cover_item_thumbnail>
+																<img src="//i1.daumcdn.net/thumb/C126x164/?fname=[##_cover_item_thumbnail_##]"
+																	alt="">
+															</s_cover_item_thumbnail>
+														</figure>
+														<span class="title">[##_cover_item_title_##]</span>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+									</div>
+								</s_cover>
+
+								<s_cover name='cover-thumbnail-4'>
+									<div class="cover-thumbnail-4">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]">
+														<figure>
+															<s_cover_item_thumbnail>
+																<img src="//i1.daumcdn.net/thumb/C230x140/?fname=[##_cover_item_thumbnail_##]"
+																	alt="">
+															</s_cover_item_thumbnail>
+														</figure>
+														<span class="title">[##_cover_item_title_##]</span>
+														<s_cover_item_article_info>
+															<span class="excerpt">[##_cover_item_summary_##]</span>
+															<span class="meta">
+																<span class="comment">댓글
+																	[##_cover_item_comment_count_##]</span>
+																<span class="date">[##_cover_item_simple_date_##]</span>
+															</span>
+														</s_cover_item_article_info>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+									</div>
+								</s_cover>
+
+								<s_cover name='cover-list'>
+									<div class="cover-list">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]">
+														<span class="title">[##_cover_item_title_##]</span>
+														<span class="excerpt">[##_cover_item_summary_##]</span>
+														<s_cover_item_article_info>
+															<span class="date">[##_cover_item_simple_date_##]</span>
+														</s_cover_item_article_info>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+									</div>
+								</s_cover>
+
+								<s_cover name='cover-event'>
+									<div class="cover-event">
+										<h2>[##_cover_title_##]</h2>
+										<ul>
+											<s_cover_item>
+												<li>
+													<a href="[##_cover_item_url_##]" <s_cover_item_thumbnail>
+														style="background-image:url(//i1.daumcdn.net/thumb/C360x120/?fname=[##_cover_item_thumbnail_##])"
+														</s_cover_item_thumbnail>>
+														<s_cover_item_article_info>
+															<span class="title">[##_cover_item_title_##]</span>
+															<span class="more">more</span>
+														</s_cover_item_article_info>
+													</a>
+												</li>
+											</s_cover_item>
+										</ul>
+									</div>
+								</s_cover>
+
+							</s_cover_rep>
+						</s_cover_group>
+
+						<s_page_rep>
+							<div class="post-cover">
+								<div class="inner">
+									<h1>[##_article_rep_title_##]</h1>
+									<span class="meta">
+										<span class="author">by [##_article_rep_author_##]</span>
+										<span class="date">[##_article_rep_simple_date_##]</span>
+									</span>
+								</div>
+							</div>
+							<div class="entry-content">
+								[##_article_rep_desc_##]
+							</div>
+						</s_page_rep>
+						<!-- 공지글 -->
+						<s_notice_rep>
+							<div class="post-cover notice" <s_notice_rep_thumbnail> style="background-image:
+								url([##_notice_rep_thumbnail_raw_url_##]);"</s_notice_rep_thumbnail>>
+								<div class="inner">
+									<h1><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
+									<span class="meta">
+										<span class="date">[##_notice_rep_simple_date_##]</span>
+									</span>
+								</div>
+							</div>
+							<div class="entry-content">
+								[##_notice_rep_desc_##]
+							</div>
+						</s_notice_rep>
+						<!-- 글 리스트 header -->
+						<div class="bd-list-wrap">
+							<s_list>
+								<div class="bd-list-head">
+									<p class="desc">[##_list_description_##]</p>
+									<h1>[##_list_conform_##]<div class="bd-count">[##_list_count_##]</div>
+									</h1>
+								</div>
+
+								<s_list_empty>
+									<div class="not-found">
+										<div>
+											<div class="font-bold text-xl mb-3">웁스,,</div>
+											<div class="text-lg">안나오네요. 검색어를 다시 입력해봐용!</div>
+										</div>
+										<div class="tag">
+											<p>선택하신 태그에 해당하는 글이 없습니다.</p>
+										</div>
+										<div class="category">
+											<P>선택하신 카테고리에 해당하는 글이 없습니다.</P>
+										</div>
+										<div class="archive">
+											<p>선택하신 기간에 등록된 글이 없습니다.</p>
+										</div>
+									</div>
+								</s_list_empty>
+							</s_list>
+						</div>
+						<!--  보호글 -->
+						<s_article_protected>
+							<s_index_article_rep>
+								<div class="bd-list">
+									<div class="bd-item protected">
+										<a href="[##_article_rep_link_##]">
+											<span class="thum"></span>
+											<span class="title">[##_article_rep_title_##]</span>
+											<span class="excerpt">보호되어 있는 글 입니다.</span>
+											<span class="meta">
+												<span class="date">[##_article_rep_simple_date_##]</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</s_index_article_rep>
+
+							<s_permalink_article_rep>
+								<div class="entry-content">
+									<form class="protected_form" onsubmit="{reloadEntry(14);return false;}">
+										<h2>보호되어 있는 글입니다.</h2>
+										<p>내용을 보시려면 비밀번호를 입력하세요.</p>
+										<input type="password" id="entry14password" name="entry14password" value=""
+											placeholder="비밀번호">
+										<button type="submit" class="btn">확인</button>
+									</form>
+								</div>
+							</s_permalink_article_rep>
+						</s_article_protected>
+
+						<div class="inner">
+							<!-- s : bd-list -->
+							<div class="bd-list">
+								<!--  글 리스트 item : s_index_article_rep -->
+								<!--  글 뷰페이지 header : s_permalink_article_rep-->
+								<s_article_rep>
+									<s_index_article_rep>
+										<div class="bd-item">
+											<a href="[##_article_rep_link_##]">
+												<span class="thum">
+													<s_article_rep_thumbnail>
+														<img src="//i1.daumcdn.net/thumb/C230x140/?fname=[##_article_rep_thumbnail_raw_url_##]"
+															alt="">
+													</s_article_rep_thumbnail>
+												</span>
+												<div class="txt-wrap">
+													<span class="title">[##_article_rep_title_##]</span>
+													<span class="excerpt">[##_article_rep_summary_##]</span>
+													<span class="date">[##_article_rep_simple_date_##]</span>
+												</div>
+											</a>
+										</div>
+									</s_index_article_rep>
+
+									<s_permalink_article_rep>
+										<div class="bd-view-wrap">
+											<div class="bd-head">
+
+												<span class="bd-category">
+													<a itemprop="item"
+														href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+												</span>
+
+												<h1 class="bd-title">[##_article_rep_title_##]</h1>
+												<div class="meta">
+													<span class="author">by [##_article_rep_author_##]</span>
+													<span class="date">[##_article_rep_simple_date_##]</span>
+													<s_ad_div>
+														<a href="[##_s_ad_m_link_##]">수정</a>
+														<a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+													</s_ad_div>
+												</div>
+												<!--  tag -->
+												<s_tag_label>
+													<div class="tags">
+														[##_tag_label_rep_##]
+													</div>
+												</s_tag_label>
+												<div class="bd-thumb">
+													<s_article_rep_thumbnail
+														style="background-image:url([##_article_rep_thumbnail_raw_url_##])">
+													</s_article_rep_thumbnail>
+												</div>
+											</div>
+											<!--  글 내용 -->
+											<div class="toc toc1 toc-fixed mobile"></div>
+											<div class="entry-content">
+												[##_article_rep_desc_##]
+											</div>
+											<!--  관련글 -->
+											<s_article_related>
+												<div class="related-articles">
+													<h2>관련글</h2>
+													<ul>
+														<s_article_related_rep>
+															<li>
+																<a href="[##_article_related_rep_link_##]">
+																	<figure>
+																		<s_article_related_rep_thumbnail>
+																			<img src="//i1.daumcdn.net/thumb/C176x120/?fname=[##_article_related_rep_thumbnail_link_##]"
+																				alt="">
+																		</s_article_related_rep_thumbnail>
+																	</figure>
+																	<span
+																		class="title">[##_article_related_rep_title_##]</span>
+																</a>
+															</li>
+														</s_article_related_rep>
+													</ul>
+												</div>
+											</s_article_related>
+
+											<div class="comments">
+												<s_rp>
+													<div class="tt-comments-wrap">
+														[##_comment_group_##]
+													</div>
+												</s_rp>
+											</div>
+										</div>
+
+									</s_permalink_article_rep>
+								</s_article_rep>
+							</div>
+							<!-- e : bd-list -->
+							<script>
+								document.querySelectorAll('.bd-list .bd-item').forEach(item => {
+										const thum = item.querySelector('.thum');
+										if (thum && !thum.querySelector('img')) {
+												const img = document.createElement('img');
+												img.src = './images/default.png';
+												thum.appendChild(img);
+										}
+								});
+							</script>
+						</div>
+
+						<s_tag>
+							<div class="post-header">
+								<h1>태그</h1>
+							</div>
+							<div class="tags">
+								<s_tag_rep>
+									<a href="[##_tag_link_##]">[##_tag_name_##]</a>
+								</s_tag_rep>
+							</div>
+						</s_tag>
+
+						<s_guest>
+							<div class="tt-comments-wrap">
+								[##_guestbook_group_##]
+							</div>
+						</s_guest>
+
+						<s_paging>
+							<div class="pagination">
+								<a [##_prev_page_##] class="page-prev ricon [##_no_more_prev_##]">이전</a>
+								<s_paging_rep>
+									<a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a>
+								</s_paging_rep>
+								<a [##_next_page_##] class="page-next ricon [##_no_more_next_##]">다음</a>
+							</div>
+						</s_paging>
+
+						[##_revenue_list_lower_##]
+
+						<!-- 공지사항 -->
+						<!--<div class="bd-foot-notice">
+					<s_rct_notice>
+						<div class="notice">
+							<h2>공지사항</h2>
+							<ul>
+								<s_rct_notice_rep>
+									<li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
+								</s_rct_notice_rep>
+							</ul>
+						</div>
+					</s_rct_notice>
+				</div>-->
+						<!-- 하단 3단박스(최근댓글, 최근글, 인기글) -->
+						<div class="bd-foot-conts">
+							<div>
+								<!-- 최근댓글 -->
+								<div class="recent-comment">
+									<h2>최근댓글</h2>
+									<ul>
+										<s_rctrp_rep>
+											<li><a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a></li>
+										</s_rctrp_rep>
+									</ul>
+								</div>
+							</div>
+							<!-- 최근글 -->
+							<div>
+								<div id="recent" class="tab-list">
+									<h2>최근글</h2>
+									<ul>
+										<s_rctps_rep>
+											<li>
+												<a href="[##_rctps_rep_link_##]">
+													<div class="thumb">
+														<s_rctps_rep_thumbnail>
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=[##_rctps_rep_thumbnail_##]"
+																alt="" />
+														</s_rctps_rep_thumbnail>
+													</div>
+													<div class="txt">
+														<div class="title">[##_rctps_rep_title_##]</div>
+														<div class="date">[##_rctps_rep_simple_date_##]</div>
+													</div>
+												</a>
+											</li>
+										</s_rctps_rep>
+									</ul>
+								</div>
+							</div>
+							<!-- 인기글 -->
+							<div>
+								<div id="popular" class="tab-list">
+									<h2>인기글</h2>
+									<ul>
+										<s_rctps_popular_rep>
+											<li>
+												<a href="[##_rctps_rep_link_##]">
+													<div class="thumb">
+														<s_rctps_rep_thumbnail>
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=[##_rctps_rep_thumbnail_##]"
+																alt="" />
+														</s_rctps_rep_thumbnail>
+													</div>
+													<div class="txt">
+														<div class="title">[##_rctps_rep_title_##]</div>
+														<div class="date">[##_rctps_rep_simple_date_##]</div>
+													</div>
+												</a>
+											</li>
+										</s_rctps_popular_rep>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="df jce" style="color: #7c7c7c;">skin by © 2024 ttutta</div>
+					</article>
+				</div>
+				<aside id="r_side">
+					<div class="floating">
+						<!-- 태그 -->
+						<div class="tags">
+							<s_random_tags>
+								<a href="[##_tag_link_##]">[##_tag_name_##]</a>
+							</s_random_tags>
+						</div>
+						<!-- 태그 -->
+						<!-- test -->
+						<div class="toc toc2 toc-fixed"></div>
+					</div>
+				</aside>
+				<div class="totop">
+					<i class="ri-arrow-up-line"></i>
+				</div>
+			</section>
+		</div>
+	</s_t3>
+</body>
+
+</html>

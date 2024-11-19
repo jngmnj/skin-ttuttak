@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<information>
+		<name>뚝딱일상 스킨1</name>
+		<version>1.0</version>
+		<description>
+			<![CDATA[ 깔끔한 화이트톤 반응형 스킨입니다. 
+			감각적인 스킨을 만들어보고싶었습니다. 많이 이용해주세요! ]]>
+		</description>
+		<license>
+			<![CDATA[ MIT License ]]>
+		</license>
+	</information>
+	<author>
+		<name>ttuttak</name>
+		<homepage>https://antitttfragile.tistory.com/</homepage>
+		<email>gogetem@kakao.com</email>
+	</author>
+	<default>
+		<entriesOnPage>4</entriesOnPage>
+		<entriesOnList>4</entriesOnList>
+		<recentEntries>5</recentEntries>
+		<recentComments>4</recentComments>
+		<recentTrackbacks>4</recentTrackbacks>
+		<itemsOnGuestbook>10</itemsOnGuestbook>
+		<tagsInCloud>30</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>1</expandComment>
+		<lengthOfRecentNotice>25</lengthOfRecentNotice>
+		<lengthOfRecentEntry>27</lengthOfRecentEntry>
+		<lengthOfRecentComment>30</lengthOfRecentComment>
+		<lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+		<lengthOfLink>30</lengthOfLink>
+		<showListOnCategory>1</showListOnCategory>
+		<showListOnArchive>1</showListOnArchive>
+		<tree>
+			<color>000000</color>
+			<bgColor>ffffff</bgColor>
+			<activeColor>000000</activeColor>
+			<activeBgColor>eeeeee</activeBgColor>
+			<labelLength>27</labelLength>
+			<showValue>0</showValue>
+		</tree>
+		<contentWidth>1920</contentWidth>
+	</default>
+	<cover>
+		<item>
+			<name>cover-list</name>
+			<label><![CDATA[기본 리스트]]></label>
+			<description><![CDATA[제목과 본문으로 구성된 텍스트 중심의 기본 리스트입니다.]]></description>
+		</item>
+		<item>
+			<name>cover-thumbnail-1</name>
+			<label><![CDATA[섬네일 리스트]]></label>
+			<description><![CDATA[섬네일과 제목으로 구성된 심플한 리스트입니다.]]></description>
+		</item>
+		<item>
+			<name>cover-thumbnail-2</name>
+			<label><![CDATA[뉴스레터]]></label>
+			<description><![CDATA[이미지가 우측에 작게 나타나는 텍스트 중심의 아이템입니다.]]></description>
+		</item>
+		<item>
+			<name>cover-thumbnail-3</name>
+			<label><![CDATA[커버 갤러리1]]></label>
+			<description><![CDATA[여러 콘텐츠를 한 눈에 바라볼 수 있는 이미지 중심의 아이템입니다.]]></description>
+		</item>
+		<item>
+			<name>cover-thumbnail-4</name>
+			<label><![CDATA[커버 갤러리2]]></label>
+			<description><![CDATA[섬네일과 텍스트가 같은 비중으로 밀접하게 배치된 아이템입니다.]]></description>
+		</item>
+		<item>
+			<name>cover-event</name>
+			<label><![CDATA[이벤트 배너]]></label>
+			<description><![CDATA[배너 스타일의 섬네일을 활용할 수 있는 아이템입니다.]]></description>
+		</item>
+	</cover>
+	<variables>
+		<variable>
+			<name>logo</name>
+			<label><![CDATA[ 로고(높이 64px) ]]></label>
+			<description><![CDATA[]]></description>
+			<type>IMAGE</type>
+			<option />
+			<default></default>
+		</variable>
+		<variable>
+			<name>point-color</name>
+			<label><![CDATA[ 포인트컬러 ]]></label>
+			<description><![CDATA[]]></description>
+			<type>COLOR</type>
+			<option />
+			<default>#04beb8</default>
+		</variable>
+		<variablegroup name="프로필배경 (*이미지 입력 필수)">
+			<variable>
+				<name>profile-bg-image</name>
+				<label><![CDATA[ 프로필배경 - 이미지 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>IMAGE</type>
+				<option />
+				<default></default>
+			</variable>
+		</variablegroup>
+
+		<variablegroup name="홈 프로모션1 (*이미지 입력 필수)">
+			<variable>
+				<name>promotion-1-image</name>
+				<label><![CDATA[ 프로모션1 - 이미지 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>IMAGE</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-1-text</name>
+				<label><![CDATA[ 프로모션1 - 문구 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-1-color</name>
+				<label><![CDATA[ 프로모션1 - 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-1-url</name>
+				<label><![CDATA[ 프로모션1 - 자세히보기 URL ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-1-btn-color</name>
+				<label><![CDATA[ 프로모션1 - 자세히보기 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-1-btn-hover-color</name>
+				<label><![CDATA[ 프로모션1 - 자세히보기 Hover 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+		</variablegroup>
+		<variablegroup name="홈 프로모션2 (*이미지 입력 필수)">
+			<variable>
+				<name>promotion-2-image</name>
+				<label><![CDATA[ 프로모션2 - 이미지 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>IMAGE</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-2-text</name>
+				<label><![CDATA[ 프로모션2 - 문구 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-2-color</name>
+				<label><![CDATA[ 프로모션2 - 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-2-url</name>
+				<label><![CDATA[ 프로모션2 - 자세히보기 URL ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-2-btn-color</name>
+				<label><![CDATA[ 프로모션2 - 자세히보기 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-2-btn-hover-color</name>
+				<label><![CDATA[ 프로모션2 - 자세히보기 Hover 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+		</variablegroup>
+		<variablegroup name="홈 프로모션3 (*이미지 입력 필수)">
+			<variable>
+				<name>promotion-3-image</name>
+				<label><![CDATA[ 프로모션3 - 이미지 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>IMAGE</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-3-text</name>
+				<label><![CDATA[ 프로모션3 - 문구 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-3-color</name>
+				<label><![CDATA[ 프로모션3 - 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-3-url</name>
+				<label><![CDATA[ 프로모션3 - 자세히보기 URL ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-3-btn-color</name>
+				<label><![CDATA[ 프로모션3 - 자세히보기 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-3-btn-hover-color</name>
+				<label><![CDATA[ 프로모션3 - 자세히보기 Hover 색상 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>COLOR</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>promotion-mobile-view</name>
+				<label><![CDATA[ 홈 프로모션 모바일 노출 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>BOOL</type>
+				<option />
+				<default>true</default>
+			</variable>
+		</variablegroup>
+		<variablegroup name="리스트">
+			<variable>
+				<name>list-type</name>
+				<label><![CDATA[ 리스트 타입 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>SELECT</type>
+				<option><![CDATA[[{"name":"list-type-default","label":"북리뷰","value":""}, {"name":"list-type-vertical","label":"베스트셀러","value":"list-type-vertical"}, {"name":"list-type-thumbnail","label":"뉴북","value":"list-type-thumbnail"}, {"name":"list-type-text","label":"뉴스레터","value":"list-type-text"}]]]></option>
+				<default></default>
+			</variable>
+			<variable>
+				<name>view-more</name>
+				<label><![CDATA[ 더보기 방식 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>SELECT</type>
+				<option><![CDATA[[{"name":"paging-number","label":"페이징","value":"paging-number"}, {"name":"paging-view-more","label":"더보기","value":" paging-view-more"}]]]></option>
+				<default>paging-number</default>
+			</variable>
+		</variablegroup>
+		<variablegroup name="사이드바">
+			<variable>
+				<name>layout-aside</name>
+				<label><![CDATA[ 사이드바 위치 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>SELECT</type>
+				<option><![CDATA[[{"name":"layout-aside-left","label":"좌측","value":"layout-aside-left"}, {"name":"layout-aside-right","label":"우측","value":"layout-aside-right"}]]]></option>
+				<default>layout-aside-right</default>
+			</variable>
+			<variable>
+				<name>facebook-timeline</name>
+				<label><![CDATA[ 페이스북 타임라인 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>velog-link</name>
+				<label><![CDATA[ velog 링크 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default><![CDATA[https://velog.io/@jngmnj]]></default>
+			</variable>
+			<variable>
+				<name>github-link</name>
+				<label><![CDATA[ 페이스북 링크 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default><![CDATA[https://github.com/jngmnj]]></default>
+			</variable>
+			<variable>
+				<name>instagram-link</name>
+				<label><![CDATA[ 인스타그램 링크 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default><![CDATA[https://instagram.com/jngmnj/]]></default>
+			</variable>
+			<variable>
+				<name>twitter-link</name>
+				<label><![CDATA[ 트위터 링크 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>youtube-link</name>
+				<label><![CDATA[ 유튜브 링크 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+		</variablegroup>
+		<variablegroup name="푸터">
+			<variable>
+				<name>order-link-1-title</name>
+				<label><![CDATA[ 외부링크1 이름 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-1-url</name>
+				<label><![CDATA[ 외부링크1 주소 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-2-title</name>
+				<label><![CDATA[ 외부링크2 이름 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-2-url</name>
+				<label><![CDATA[ 외부링크2 주소 ]]></label>
+				<type>STRING</type>
+				<option />
+				<default></default>
+				<description><![CDATA[]]></description>
+			</variable>
+			<variable>
+				<name>order-link-3-title</name>
+				<label><![CDATA[ 외부링크3 이름 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-3-url</name>
+				<label><![CDATA[ 외부링크3 주소 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-4-title</name>
+				<label><![CDATA[ 외부링크4 이름 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+			<variable>
+				<name>order-link-4-url</name>
+				<label><![CDATA[ 외부링크4 주소 ]]></label>
+				<description><![CDATA[]]></description>
+				<type>STRING</type>
+				<option />
+				<default></default>
+			</variable>
+		</variablegroup>
+	</variables>
+</skin>
