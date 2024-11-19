@@ -38,11 +38,13 @@ Code에서 Download ZIP을 눌러서 다운받아줍니다.
 ![image](https://github.com/user-attachments/assets/2d76ba95-d4df-4be9-ad2d-16c348ca9b64)
 
 3. `스킨등록` > `추가` 버튼을 눌러 파일을 다 업로드해주세요. 
+
 그리고 `저장` 을 누릅니다.
 
 ![image](https://github.com/user-attachments/assets/130c0f33-49c4-45de-a62a-8e8d1b4be631)
 
 4. 배경등 나머지 커스텀은 `스킨편집`에서 해주세요. 
+
 https://[티스토리주소].tistory.com/manage/design/skin/edit#/
 
 ![image](https://github.com/user-attachments/assets/f02a5aea-6131-4f84-9343-7dff89e53868)
@@ -55,5 +57,7 @@ https://[티스토리주소].tistory.com/manage/design/skin/edit#/
 ![image](https://github.com/user-attachments/assets/4a6107c8-c4ce-4aa2-9d0d-7e2d2b63e3b0)
 
 프로필 뒷 배경을 편집하시고 싶으시다구요 ? ㅎㅎ
+
 https://\[티스토리주소\].tistory.com/manage/design/skin/edit#/
+
 이 링크에서 프로필 배경 이미지를 설정할 수 있습니다!
