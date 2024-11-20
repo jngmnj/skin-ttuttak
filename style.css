@@ -48,6 +48,7 @@
 ::-webkit-scrollbar{width: 5px;height:12px;background-color:#F5F5F5;} 
 ::-webkit-scrollbar-thumb{background-color: #bbd3c2;-webkit-border-radius: 8px; border-radius: 8px;}
  
+img {max-width: 100%;}
 
  /* btn size */
 .btn-xs {padding: 4px 8px;font-size: 8px;}
