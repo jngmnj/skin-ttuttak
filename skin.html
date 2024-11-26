@@ -58,6 +58,10 @@
 					$('.toc').removeClass('toc-fixed');
 				}
 			});
+
+			$('img[alt="N"]').each(function () {
+				$(this).parent().addClass('new');
+			});
 		});
 	</script>
 
