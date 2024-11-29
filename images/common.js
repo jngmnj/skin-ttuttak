@@ -6,6 +6,11 @@ $(document).ready(function(){
     return false;
   });
 
+  $('img[alt="N"]').each(function () {
+    $(this).parent().addClass("new");
+    console.log("test");
+  });
+
   $(window).scroll(function () {
     if ($(document).scrollTop() > 0 && !$(".all-menu-btn").hasClass("active")) {
       $(".totop").addClass("show");
