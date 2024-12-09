@@ -303,7 +303,7 @@ a:active {text-decoration:none;}
 #container {/*height: calc(100% - 50px);margin-top: 50px;*/display: flex;justify-content:center;}
 /* left aside */
 #l_side {width: 400px;position:relative;min-height: 100vh;}
-#l_side .floating {padding: 20px;position: sticky;top:0;height: 100vh;/*overflow-y: auto;*/}
+#l_side .floating {padding: 20px;position: sticky;top:0;height: 100vh;overflow-y: auto;}
 #l_side .box-profile {border: 1px solid var(--color-main);border-radius: 8px;position: relative;overflow: hidden;margin-bottom: 24px;background: #fff;}
 /* #l_side .box-profile .profile {padding: 32px 24px 24px;} */
 #l_side .box-profile .profile .img-profile-bg {background:#eee;background-size: contain;height: 72px;width:100%;}
