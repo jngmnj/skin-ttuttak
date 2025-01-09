@@ -878,7 +878,7 @@ margin-bottom: 8px;display: block;position: relative;}
 	margin-bottom: 2px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	line-height: 1.75;
+	line-height: 1.8;
 }
 .cover-thumbnail-1 ul li .date {
 	display: block;
@@ -1215,7 +1215,7 @@ margin-bottom: 8px;display: block;position: relative;}
 	margin-bottom: 18px;
 	text-overflow: ellipsis;
 	font-size: 0.875em;
-	line-height: 1.5;
+	line-height: 1.8;
 	color: #999;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
@@ -1355,7 +1355,7 @@ display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
 line-height: 1.4;
 font-size: 24px;font-weight: 600;
 }
-.bd-item .excerpt {display: block;overflow: hidden;max-width: 95%;margin-bottom: 24px;text-overflow: ellipsis;font-size: 16px;line-height: 1.5;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-all;}
+.bd-item .excerpt {display: block;overflow: hidden;max-width: 95%;margin-bottom: 24px;text-overflow: ellipsis;font-size: 16px;line-height: 1.8;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-all;}
 .bd-item .date {font-size: 14px;color: #999;}
 .bd-item .meta {
 	display: block;
@@ -1756,7 +1756,7 @@ color: #999;
 .entry-content p {
 	word-break: break-word;
 	font-size: 1rem;
-	line-height: 1.7;
+	line-height: 1.8;
 	/* margin-bottom: 24px !important; */
 	color: #555;
 }
@@ -1794,7 +1794,7 @@ color: #999;
 .entry-content ul li {
 	position: relative;
 	font-size: 1em;
-	line-height: 1.5;
+	line-height: 1.8;
 	color: #666;
 	list-style: inherit;
 }
@@ -1897,7 +1897,7 @@ color: #999;
 	margin-bottom: 34px;
 	font-weight: 300;
 	font-size: 1em;
-	line-height: 1.75;
+	line-height: 1.8;
 	color: #999;
 }
 .entry-content .protected_form input {
@@ -1968,7 +1968,7 @@ color: #999;
 	background: none !important;
 	font-weight: normal !important;
 	font-size: 1em !important;
-	line-height: 1.75;
+	line-height: 1.8;
 	color: #999 !important;
 }
 
