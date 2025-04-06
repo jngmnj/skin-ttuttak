@@ -179,7 +179,7 @@ body {
 	font-weight: 400;
 	font-size: 1em;
 	line-height: 1.25;
-	color: #555;
+	color: #444;
 	/* background: #eee; */
 }
 html, body {
@@ -1452,7 +1452,7 @@ code.hljs table {
 	text-align: center;
 	font-size: 0.9375em;
 	line-height: 1.5714;
-	color: #666;
+	/* color: #666; */
 	margin-bottom: 0;
 }
 code.hljs table thead th {
@@ -1722,7 +1722,7 @@ color: #999;
 	clear: both;
 	margin: 40px 0 24px;
 	font-weight: 700 !important;
-	font-size: 1.6875em;
+	font-size: 1.7em;
 	line-height: 1.5;
 	color: var(--color-main);
 }
@@ -1730,7 +1730,7 @@ color: #999;
 	clear: both;
 	margin: 40px 0 24px;
 	font-weight: 600 !important;
-	font-size: 1.5em;
+	font-size: 1.62em;
 	line-height: 1.5;
 	color: var(--color-main);
 	border-bottom: 1px solid var(--color-gray);
@@ -1738,7 +1738,7 @@ color: #999;
 .entry-content h3 {
 	clear: both;
 	margin: 24px 0 12px;
-	font-size: 1.3125em;
+	font-size: 1.44em;
 	line-height: 1.5;
 	color: var(--color-main);
 }
@@ -1746,7 +1746,7 @@ color: #999;
 	clear: both;
 	margin: 24px 0 12px;
 	font-weight: 400;
-	font-size: 1.125em;
+	font-size: 1.25em;
 	line-height: 1.5;
 	color: var(--color-main);
 }
@@ -1782,20 +1782,30 @@ color: #999;
 	list-style: disc;
 	/* margin-bottom: 22px; */
 	/* padding: revert; */
+	margin: 8px auto 12px;
 	padding-left: 16px;
 }
+
 .entry-content ol {
 	/* list-style-type: decimal inside; */
 	list-style-type: decimal;
-	margin-bottom: 22px;
+	/* margin-bottom: 22px; */
+	margin: 8px auto 12px;
 	padding-left: 16px;
 }
+
+.entry-content li ul,
+.entry-content li ol {
+	margin: 4px auto;
+}
+
 .entry-content ol li,
 .entry-content ul li {
 	position: relative;
 	font-size: 1em;
 	line-height: 1.8;
-	color: #666;
+	margin-bottom: 3px;
+	/* color: #666; */
 	list-style: inherit;
 }
 .entry-content ol li::marker {}
@@ -1830,7 +1840,7 @@ color: #999;
 	border-collapse: collapse;
 	font-size: 0.9375em;
 	line-height: 1.5714;
-	color: #666;
+	/* color: #666; */
 }
 .entry-content table thead th {
 	padding:7px 0 11px;
@@ -1847,7 +1857,7 @@ color: #999;
 	border: 1px solid #e6e6e6;
 	font-size: 0.875em;
 	line-height: 1.25;
-	color: #666;
+	/* color: #666; */
 	box-sizing: border-box;
 	vertical-align: middle;
 }
