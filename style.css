@@ -1836,18 +1836,19 @@ color: #999;
 .entry-content table {
 	width:100%;
 	margin-bottom: 22px;
-	/* border: 1px solid #e6e6e6; */
+	border: 1px solid var(--color-pale03);
+	border-top: 2px solid var(--color-strong02);
 	border-collapse: collapse;
 	font-size: 0.9375em;
 	line-height: 1.5714;
 	/* color: #666; */
 }
 .entry-content table thead th {
-	padding:7px 0 11px;
+	padding: 8px 0;
 	/* border-left: 1px solid #e6e6e6; */
 }
 .entry-content table tbody td {
-	padding:7px 0 11px;
+	padding: 6px 0;
 	/* border-left: 1px solid #e6e6e6; */
 	/* border-top: 1px solid #e6e6e6; */
 }
